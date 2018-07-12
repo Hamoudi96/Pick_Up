@@ -1,0 +1,56 @@
+# This file is included in-line in the env section of deployment.yaml
+# if .Values.generatedBindings.enabled is true.
+- name: IBM_APM_SERVER_URL
+  valueFrom:
+    secretKeyRef:
+      name: apm-server-config
+      key: ibm_apm_server_url
+      optional: true
+- name: IBM_APM_KEYFILE
+  valueFrom:
+    secretKeyRef:
+      name: apm-server-config
+      key: ibm_apm_keyfile
+      optional: true
+- name: IBM_APM_KEYFILE_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: apm-server-config
+      key: ibm_apm_keyfile_password
+      optional: true
+- name: IBM_APM_INGRESS_URL
+  valueFrom:
+    secretKeyRef:
+      name: apm-server-config
+      key: ibm_apm_ingress_url
+      optional: true
+- name: IBM_APM_ACCESS_TOKEN
+  valueFrom:
+    secretKeyRef:
+      name: apm-server-config
+      key: ibm_apm_access_token
+      optional: true
+- name: service_alert_notification
+  valueFrom:
+    secretKeyRef:
+      name: binding-pickupgame-alertnotificati-1531425967640
+      key: binding
+      optional: true
+- name: service_appid
+  valueFrom:
+    secretKeyRef:
+      name: binding-pickupgame-appid-1531426046322
+      key: binding
+      optional: true
+- name: service_cloudant
+  valueFrom:
+    secretKeyRef:
+      name: binding-pickupgame-cloudant-1531426009832
+      key: binding
+      optional: true
+- name: service_push
+  valueFrom:
+    secretKeyRef:
+      name: binding-pickupgame-push-1531425984902
+      key: binding
+      optional: true

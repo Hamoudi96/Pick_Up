@@ -1,0 +1,22 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
+
+[packages]
+cloudant ='~=2.5.0'
+pyjwt ='==1.5.0'
+rsa ='==3.4.2'
+cryptography ='*'
+requests ='*'
+livereload ='*'
+ibmcloudenv ='~=0.0'
+Django = "==1.11.8"
+gunicorn = "==19.7.1"
+whitenoise= "==3.3.1"
+

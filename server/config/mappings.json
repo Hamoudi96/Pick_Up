@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "alert_notification_name": {
+    "searchPatterns": [
+      "user-provided:pickupgame-alertnotificati-1531425967640:name",
+      "cloudfoundry:$['alertnotification'][0].credentials.name",
+      "env:service_alert_notification:$.name",
+      "env:alert_notification_name",
+      "file:/server/localdev-config.json:$.alert_notification_name"
+    ]
+  },
+  "alert_notification": {
+    "credentials": {
+      "searchPatterns": [
+        "user-provided:pickupgame-alertnotificati-1531425967640:url",
+        "cloudfoundry:alert_notification",
+        "env:alert_notification_credentials",
+        "file://localdev-config.json:alert_notification_credentials"
+      ]
+    }
+  },
+  "alert_notification_password": {
+    "searchPatterns": [
+      "user-provided:pickupgame-alertnotificati-1531425967640:password",
+      "cloudfoundry:$['alertnotification'][0].credentials.password",
+      "env:service_alert_notification:$.password",
+      "env:alert_notification_password",
+      "file:/server/localdev-config.json:$.alert_notification_password"
+    ]
+  },
+  "alert_notification_url": {
+    "searchPatterns": [
+      "user-provided:pickupgame-alertnotificati-1531425967640:url",
+      "cloudfoundry:$['alertnotification'][0].credentials.url",
+      "env:service_alert_notification:$.url",
+      "env:alert_notification_url",
+      "file:/server/localdev-config.json:$.alert_notification_url"
+    ]
+  },
+  "appid_client_id": {
+    "searchPatterns": [
+      "user-provided:pickupgame-appid-1531426046322:clientId",
+      "cloudfoundry:$['AdvancedMobileAccess-d6aece47-d840-45b0-8ab9-ad15354deeea'][0].credentials.clientId",
+      "env:service_appid:$.clientId",
+      "env:appid_clientId",
+      "file:/server/localdev-config.json:$.appid_clientId"
+    ]
+  },
+  "appid": {
+    "credentials": {
+      "searchPatterns": [
+        "user-provided:pickupgame-appid-1531426046322:tenantId",
+        "cloudfoundry:appid",
+        "env:appid_credentials",
+        "file://localdev-config.json:appid_credentials"
+      ]
+    }
+  },
+  "appid_oauth_server_url": {
+    "searchPatterns": [
+      "user-provided:pickupgame-appid-1531426046322:oauthServerUrl",
+      "cloudfoundry:$['AdvancedMobileAccess-d6aece47-d840-45b0-8ab9-ad15354deeea'][0].credentials.oauthServerUrl",
+      "env:service_appid:$.oauthServerUrl",
+      "env:appid_oauthServerUrl",
+      "file:/server/localdev-config.json:$.appid_oauthServerUrl"
+    ]
+  },
+  "appid_profiles_url": {
+    "searchPatterns": [
+      "user-provided:pickupgame-appid-1531426046322:profilesUrl",
+      "cloudfoundry:$['AdvancedMobileAccess-d6aece47-d840-45b0-8ab9-ad15354deeea'][0].credentials.profilesUrl",
+      "env:service_appid:$.profilesUrl",
+      "env:appid_profilesUrl",
+      "file:/server/localdev-config.json:$.appid_profilesUrl"
+    ]
+  },
+  "appid_secret": {
+    "searchPatterns": [
+      "user-provided:pickupgame-appid-1531426046322:secret",
+      "cloudfoundry:$['AdvancedMobileAccess-d6aece47-d840-45b0-8ab9-ad15354deeea'][0].credentials.secret",
+      "env:service_appid:$.secret",
+      "env:appid_secret",
+      "file:/server/localdev-config.json:$.appid_secret"
+    ]
+  },
+  "appid_tenant_id": {
+    "searchPatterns": [
+      "user-provided:pickupgame-appid-1531426046322:tenantId",
+      "cloudfoundry:$['AdvancedMobileAccess-d6aece47-d840-45b0-8ab9-ad15354deeea'][0].credentials.tenantId",
+      "env:service_appid:$.tenantId",
+      "env:appid_tenantId",
+      "file:/server/localdev-config.json:$.appid_tenantId"
+    ]
+  },
+  "cloudant_host": {
+    "searchPatterns": [
+      "user-provided:pickupgame-cloudant-1531426009832:host",
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.host",
+      "env:service_cloudant:$.host",
+      "env:cloudant_host",
+      "file:/server/localdev-config.json:$.cloudant_host"
+    ]
+  },
+  "cloudant": {
+    "credentials": {
+      "searchPatterns": [
+        "user-provided:pickupgame-cloudant-1531426009832:username",
+        "cloudfoundry:cloudant",
+        "env:cloudant_credentials",
+        "file://localdev-config.json:cloudant_credentials"
+      ]
+    }
+  },
+  "cloudant_password": {
+    "searchPatterns": [
+      "user-provided:pickupgame-cloudant-1531426009832:password",
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.password",
+      "env:service_cloudant:$.password",
+      "env:cloudant_password",
+      "file:/server/localdev-config.json:$.cloudant_password"
+    ]
+  },
+  "cloudant_port": {
+    "searchPatterns": [
+      "user-provided:pickupgame-cloudant-1531426009832:port",
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.port",
+      "env:service_cloudant:$.port",
+      "env:cloudant_port",
+      "file:/server/localdev-config.json:$.cloudant_port"
+    ]
+  },
+  "cloudant_url": {
+    "searchPatterns": [
+      "user-provided:pickupgame-cloudant-1531426009832:url",
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.url",
+      "env:service_cloudant:$.url",
+      "env:cloudant_url",
+      "file:/server/localdev-config.json:$.cloudant_url"
+    ]
+  },
+  "cloudant_username": {
+    "searchPatterns": [
+      "user-provided:pickupgame-cloudant-1531426009832:username",
+      "cloudfoundry:$['cloudantNoSQLDB'][0].credentials.username",
+      "env:service_cloudant:$.username",
+      "env:cloudant_username",
+      "file:/server/localdev-config.json:$.cloudant_username"
+    ]
+  },
+  "push_app_guid": {
+    "searchPatterns": [
+      "user-provided:pickupgame-push-1531425984902:appGuid",
+      "cloudfoundry:$['Push-d6aece47-d840-45b0-8ab9-ad15354deeea'][0].credentials.appGuid",
+      "env:service_push:$.appGuid",
+      "env:push_appGuid",
+      "file:/server/localdev-config.json:$.push_appGuid"
+    ]
+  },
+  "push": {
+    "credentials": {
+      "searchPatterns": [
+        "user-provided:pickupgame-push-1531425984902:url",
+        "cloudfoundry:push",
+        "env:push_credentials",
+        "file://localdev-config.json:push_credentials"
+      ]
+    }
+  },
+  "push_app_secret": {
+    "searchPatterns": [
+      "user-provided:pickupgame-push-1531425984902:appSecret",
+      "cloudfoundry:$['Push-d6aece47-d840-45b0-8ab9-ad15354deeea'][0].credentials.appSecret",
+      "env:service_push:$.appSecret",
+      "env:push_appSecret",
+      "file:/server/localdev-config.json:$.push_appSecret"
+    ]
+  },
+  "push_client_secret": {
+    "searchPatterns": [
+      "user-provided:pickupgame-push-1531425984902:clientSecret",
+      "cloudfoundry:$['Push-d6aece47-d840-45b0-8ab9-ad15354deeea'][0].credentials.clientSecret",
+      "env:service_push:$.clientSecret",
+      "env:push_clientSecret",
+      "file:/server/localdev-config.json:$.push_clientSecret"
+    ]
+  },
+  "push_url": {
+    "searchPatterns": [
+      "user-provided:pickupgame-push-1531425984902:url",
+      "cloudfoundry:$['Push-d6aece47-d840-45b0-8ab9-ad15354deeea'][0].credentials.url",
+      "env:service_push:$.url",
+      "env:push_url",
+      "file:/server/localdev-config.json:$.push_url"
+    ]
+  }
+}
