@@ -23,7 +23,7 @@ def register(request):
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('main')
+            return redirect('profile')
     else:
         form = UserCreationForm()
     
@@ -45,19 +45,19 @@ def profile(request):
         
         for t in all_teams:
             team = models.TeamPlayer.objects.filter(team_id=t, player_id=player)
-            #for te in team :
-                #teams.append(te.name)
+            for te in team :
+                teams.append(te.name)
         
         all_fields = models.FieldLocation.objects.all()
         
         events_time = []
         field_address = []
         field_name = []
-        #for f in all_fields:
-            #if f.is_reserved:
-                #events_time.append(f.reservation_time)
-                #field_name = f.field_id.name
-                #zip = f.address_id.zip
+        for f in all_fields:
+            if f.is_reserved:
+                events_time.append(f.reservation_time)
+                field_name = f.field_id.name
+                zip = f.address_id.zip
                 #zip = str(zip)
                 #filed_address.append(f.address_id.street +"    " +f.address_id.city+"   " + zip+"   "+f.address_id.country) 
                 
@@ -69,6 +69,26 @@ def profile(request):
         redirect("accounts/login/")
             
     return render(request, "profile.html",context)
+
+def join_team(request):
+    context = {}
+    return render(request,"join_team.html", context)
+
+def create_team(request):
+    context = {}
+    return render(request,"create_team.html", context)
+
+def field_location(request):
+    context = {}
+    return render(request,"field_location.html", context)
+
+def create_field(request):
+    context = {}
+    return render(request,"create_field.html", context)
+
+def logout(request):
+    context = {}
+    return render(request,"logout.html", context)
 
 def health(request):
     state = {"status": "UP"}
