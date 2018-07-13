@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../static/css/index.css" type="text/css">
+</head>
+<body>
+<div class="main-container">
+    <div class=top-container">
+        <div class="text-div">
+            
+            <div id="login-button-div" class="flex-top">
+	            <form method="post" action="{% url 'login' %}" >
+	            	{% csrf_token %}
+	            	{% if form.errors %}
+	            	<p>oh.. there is something wrong</p>
+	            	{% endif %}
+	            	{% if next %}
+		            <p> Can't access admin page bud..</p>
+		            {% endif %}
+	            	<p><label for="uname"><b>Username:  </b></label>{{ form.username }}</p>
+	            	<p><label for="psw"><b>Password:  </b></label>{{ form.password }}</p>
+	            	
+	            	<div id="login-button-div" class="flex-top">
+	            		<input class="button" type="submit" name="Log in" >
+	            	</div>
+	            	<input type="hidden" name="next" value="{{ next }}">
+	            </form>
+        	</div>
+        
+           
+        </div>
+    </div>
+</div>
+</body>
+</html>
